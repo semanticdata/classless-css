@@ -3,8 +3,8 @@
     --txt-color: #000;
     --link-hover-color: salmon;
     --focus-border-color: rebeccapurple;
-
     --bg-alt-color: #dadfff;
+    --bg-alt-color-hover: #c2c6e4;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -167,6 +167,11 @@ select {
 button {
     margin-block-end: 2px;
     border: 1px solid;
+}
+
+button:hover {
+    cursor: pointer;
+    background: var(--bg-alt-color-hover);
 }
 
 button[disabled] {
