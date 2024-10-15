@@ -1,18 +1,20 @@
 :root {
-    --bg-color: #fff;
     --txt-color: #000;
-    --link-hover-color: salmon;
+
+    --bg-color: #fff;
+    --bg-color-alt: #f5f5f5;
+    --bg-color-alt-hover: #e1e4e8;
+
+    --shadow-color: #959da5;
+
+    --link-color-hover: salmon;
     --focus-border-color: rebeccapurple;
-    --bg-alt-color: #dadfff;
-    --bg-alt-color-hover: #c2c6e4;
 }
 
 /* @media (prefers-color-scheme: dark) {
     :root {
       --bg-color: #2a2a3a;
       --txt-color: #fff;
-  
-      --bg-alt-color: #2a2a2a;
     }
   } */
 
@@ -42,7 +44,7 @@ body {
 
 /* Links */
 a:hover {
-    color: var(--link-hover-color);
+    color: var(--link-color-hover);
     text-decoration: none;
 }
 
@@ -62,7 +64,7 @@ code,
 samp,
 tt,
 var {
-    background: var(--bg-alt-color);
+    background: var(--bg-color-alt);
 }
 
 pre {
@@ -78,7 +80,8 @@ code {
 
 kbd {
     vertical-align: middle;
-    background-color: #eee;
+    /* background-color: #eee; */
+    background: var(--bg-color-alt);
     border-radius: 3px;
     border: 1px solid #b4b4b4;
     box-shadow:
@@ -173,7 +176,7 @@ textarea {
     max-width: 100%;
     border: 1px solid;
     border-radius: 0.25rem;
-    background: var(--bg-alt-color);
+    background: var(--bg-color-alt);
     color: var(--txt-color);
 }
 
@@ -185,11 +188,12 @@ select {
 button {
     margin-block-end: 2px;
     border: 1px solid;
+    box-shadow: inset 0px -1px 0px var(--shadow-color);
 }
 
 button:hover {
     cursor: pointer;
-    background: var(--bg-alt-color-hover);
+    background: var(--bg-color-alt-hover);
 }
 
 button[disabled] {
@@ -278,24 +282,21 @@ dd {
     right: 1rem;
     z-index: 100;
 
-    border: 1px solid #959da5;
-    border-radius: 5px;
-    background-color: #f5f5f5;
+    background-color: var(--bg-color-alt);
     padding: 10px 15px;
     cursor: pointer;
-    box-shadow: inset 0px -1px 0px #959da5;
     transition:
         background-color 0.3s,
         transform 0.2s ease;
 }
 
 #goToTopBtn:hover {
-    background-color: #e1e4e8;
+    background-color: var(--bg-color-alt-hover);
 }
 
 #goToTopBtn:hover:active {
     transform: translateY(1px);
-    box-shadow: inset 0px 1px 0px #959da5;
+    box-shadow: inset 0px 1px 0px var(--shadow-color);
 }
 
 /* Block quotes */
