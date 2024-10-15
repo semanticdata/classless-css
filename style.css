@@ -270,6 +270,34 @@ dd {
     margin-bottom: 1rem;
 }
 
+/* Scroll to top button */
+#goToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 100;
+
+    border: 1px solid #959da5;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    padding: 10px 15px;
+    cursor: pointer;
+    box-shadow: inset 0px -1px 0px #959da5;
+    transition:
+        background-color 0.3s,
+        transform 0.2s ease;
+}
+
+#goToTopBtn:hover {
+    background-color: #e1e4e8;
+}
+
+#goToTopBtn:hover:active {
+    transform: translateY(1px);
+    box-shadow: inset 0px 1px 0px #959da5;
+}
+
 /* Loose Elements */
 blockquote {
     /* margin-inline-start: 1rem; */
