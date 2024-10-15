@@ -260,6 +260,16 @@ summary:focus {
     box-shadow: none;
 }
 
+/* Definition List */
+dt {
+    font-weight: bold;
+    font-style: oblique;
+}
+
+dd {
+    margin-bottom: 1rem;
+}
+
 /* Loose Elements */
 blockquote {
     margin-inline-start: 1rem;
