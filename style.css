@@ -1,0 +1,291 @@
+:root {
+    --bg-color: #fff;
+    --txt-color: #000;
+    --link-hover-color: salmon;
+    --focus-border-color: rebeccapurple;
+
+    --bg-alt-color: #dadfff;
+}
+
+/* @media (prefers-color-scheme: dark) {
+    :root {
+      --bg-color: #2a2a3a;
+      --txt-color: #fff;
+  
+      --bg-alt-color: #2a2a2a;
+    }
+  } */
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+body {
+    max-width: 70ch;
+    padding: 1rem;
+    margin: auto;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    tab-size: 2;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    background: var(--bg-color);
+    color: var(--txt-color);
+    font-family: sans-serif;
+}
+
+/* Links */
+a:hover {
+    color: var(--link-hover-color);
+    text-decoration: none;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+/* Code Pre Keyboard */
+pre,
+code,
+kbd,
+samp,
+tt,
+var {
+    background: var(--bg-alt-color);
+}
+
+pre {
+    overflow: auto;
+    border: 1px solid;
+}
+
+/* Images Videos SVG iFrames */
+img,
+video,
+svg {
+    height: auto;
+    max-width: 100%;
+    border: 1px solid;
+}
+
+embed,
+iframe,
+object {
+    max-width: 100%;
+}
+
+/* Tables */
+table {
+    border-collapse: collapse;
+    border-radius: 1rem;
+    width: 100%;
+    table-layout: fixed;
+}
+
+table tr {
+    border: 1px solid;
+}
+
+table th,
+table td {
+    text-align: center;
+    padding: 0.625rem;
+}
+
+table th {
+    font-size: 0.85em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+    table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    table tr {
+        border-bottom: 2px solid;
+        display: block;
+        margin-bottom: 0.625rem;
+    }
+
+    table td {
+        border-bottom: 1px solid;
+        display: block;
+        text-align: right;
+    }
+
+    table td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    table td:last-child {
+        border-bottom: 0;
+    }
+}
+
+/* Buttons Selects Inputs Textareas */
+button,
+input,
+select,
+textarea {
+    padding: 0.25rem 0.5rem;
+    max-width: 100%;
+    border: 1px solid;
+    border-radius: 0.25rem;
+    background: var(--bg-alt-color);
+    color: var(--txt-color);
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+button {
+    margin-block-end: 2px;
+    border: 1px solid;
+}
+
+button[disabled] {
+    border: 1px dashed;
+}
+
+select,
+[type="date"],
+[type="datetime-local"],
+[type="datetime"],
+[type="email"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="search"],
+[type="tel"],
+[type="text"],
+[type="time"],
+[type="url"],
+[type="week"] {
+    width: 100%;
+}
+
+[type="image"],
+[type="checkbox"],
+[type="radio"] {
+    cursor: pointer;
+}
+
+[type="color"] {
+    min-height: 2.125rem;
+}
+
+textarea {
+    width: 100%;
+    resize: vertical;
+    border: 1px solid;
+}
+
+textarea:not([rows]) {
+    height: 8rem;
+}
+
+/* Summary Details */
+details {
+    display: block;
+    background: var(--bg-color);
+    border: 1px solid;
+    border-radius: 0.25rem;
+}
+
+details>*:not(ul, ol) {
+    padding-inline-start: 1rem;
+}
+
+details[open]>summary {
+    border-bottom: 1px solid;
+}
+
+summary {
+    display: list-item;
+    cursor: pointer;
+    font-weight: bold;
+    padding-block: 0.25rem;
+}
+
+summary:focus {
+    box-shadow: none;
+}
+
+/* Loose Elements */
+blockquote {
+    margin-inline-start: 1rem;
+    padding-inline-start: 1rem;
+    border-left: 0.2rem solid var(--txt-color);
+}
+
+fieldset {
+    border-radius: 0.25rem;
+}
+
+label {
+    cursor: pointer;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+hr {
+    height: 0;
+    border: 0;
+    border-bottom: 1px solid;
+}
+
+button:focus,
+[type="button"]:focus,
+[type="color"]:focus,
+[type="reset"]:focus,
+[type="submit"]:focus,
+button:not([type]):focus,
+input:not([type]):focus,
+[type="date"]:focus,
+[type="datetime-local"]:focus,
+[type="email"]:focus,
+[type="hidden"]:focus,
+[type="image"]:focus,
+[type="month"]:focus,
+[type="number"]:focus,
+[type="password"]:focus,
+[type="search"]:focus,
+[type="tel"]:focus,
+[type="text"]:focus,
+[type="time"]:focus,
+[type="url"]:focus,
+[type="week"]:focus,
+textarea:focus,
+select:focus,
+summary:focus {
+    outline: none;
+    /*   border: 1px solid var(--focus-border-color); */
+    border-color: var(--focus-border-color);
+    box-shadow: 0 0 0.2rem 0.01rem var(--focus-border-color);
+}
