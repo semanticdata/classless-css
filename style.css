@@ -42,6 +42,12 @@ body {
     font-family: sans-serif;
 }
 
+/* Text Selection */
+::selection {
+    background-color: var(--focus-border-color);
+    color: white;
+}
+
 /* Links */
 a:hover {
     color: var(--link-color-hover);
