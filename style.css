@@ -298,45 +298,34 @@ dd {
     box-shadow: inset 0px 1px 0px #959da5;
 }
 
-/* Loose Elements */
-blockquote {
-    /* margin-inline-start: 1rem; */
-    /* padding-inline-start: 1rem; */
-    /* border-left: 0.2rem solid var(--txt-color); */
-    font-style: italic;
-}
-
-/* blockquote p::before {
-    content: '“';
-} */
-
-/* blockquote p::after {
-    content: '”';
-} */
-
+/* Block quotes */
 blockquote {
     position: relative;
     text-align: justify;
+    font-style: italic;
 }
 
 blockquote:before {
     position: absolute;
     content: open-quote;
-    font-size: 4em;
+    font-size: 3em;
     margin-left: -0.6em;
     margin-top: -0.4em;
+    font-style: normal;
 }
 
 blockquote:after {
     position: absolute;
     content: close-quote;
-    font-size: 4em;
+    font-size: 3em;
     bottom: 0;
     right: 0;
     margin-right: -0.6em;
     margin-bottom: -0.8em;
+    font-style: normal;
 }
 
+/* Loose Elements */
 fieldset {
     border-radius: 0.25rem;
 }
@@ -353,6 +342,7 @@ hr {
     border-bottom: 1px solid;
 }
 
+/* Focus */
 button:focus,
 [type="button"]:focus,
 [type="color"]:focus,
