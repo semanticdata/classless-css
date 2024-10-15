@@ -59,7 +59,6 @@ h6 {
 /* Code Pre Keyboard */
 pre,
 code,
-kbd,
 samp,
 tt,
 var {
@@ -69,6 +68,25 @@ var {
 pre {
     overflow: auto;
     border: 1px solid;
+    padding: 1rem;
+}
+
+code {
+    word-break: break-all;
+    padding: 0 1px;
+}
+
+kbd {
+    vertical-align: middle;
+    background-color: #eee;
+    border-radius: 3px;
+    border: 1px solid #b4b4b4;
+    box-shadow:
+        0 1px 1px rgba(0, 0, 0, 0.2),
+        0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
+    font-weight: 700;
+    padding: 2px 4px;
+    white-space: nowrap;
 }
 
 /* Images Videos SVG iFrames */
